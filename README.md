@@ -2,6 +2,10 @@
 
 This project is a responsive, component-based dashboard for Avrio Energy's analytical platform, designed to help business owners manage and optimize their property portfolios.
 
+
+https://github.com/user-attachments/assets/d471e2e9-e31c-4b5e-8cfd-6661f8603cfc
+
+
 ## Features
 
 - **Component-Based Architecture**: Modular design with reusable components
