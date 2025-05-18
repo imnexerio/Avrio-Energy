@@ -30,7 +30,7 @@ npm install
 npm run serve
 
 # Compile and minify for production
-npm build
+npm run build
 ```
 
 ## Project Structure
