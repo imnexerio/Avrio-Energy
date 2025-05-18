@@ -24,13 +24,13 @@ This project is a responsive, component-based dashboard for Avrio Energy's analy
 
 ```bash
 # Install dependencies
-yarn install
+npm install
 
 # Serve with hot-reload for development
-yarn serve
+npm run serve
 
 # Compile and minify for production
-yarn build
+npm build
 ```
 
 ## Project Structure
