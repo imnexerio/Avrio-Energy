@@ -16,12 +16,13 @@ body {
   background-color: #f5f7fa;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #app {
   width: 100%;
   min-height: 100vh;
-  margin-left: 60px; /* Add margin to accommodate fixed sidebar */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 button {

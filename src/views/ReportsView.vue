@@ -199,12 +199,16 @@ export default {
   display: flex;
   min-height: 100vh;
   background-color: #f5f7fa;
+  width: 100%;
 }
 
 .main-content {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-grid {

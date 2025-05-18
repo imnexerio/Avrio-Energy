@@ -253,6 +253,7 @@ export default {
 .marketplace-dashboard {
   display: flex;
   height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -260,10 +261,14 @@ export default {
   padding: 20px;
   background-color: #f5f7fa;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-content {
   margin-top: 20px;
+  width: 100%;
 }
 
 .marketplace-banner {
@@ -291,12 +296,15 @@ export default {
 
 .search-container {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on very small screens */
   max-width: 700px;
   margin: 0 auto;
+  gap: 10px; /* Add spacing when wrapped */
 }
 
 .search-container input {
   flex: 1;
+  min-width: 200px; /* Prevent input from becoming too narrow */
   padding: 12px 15px;
   font-size: 16px;
   border: none;
@@ -315,7 +323,9 @@ export default {
 
 .category-nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
+  justify-content: center; /* Center items when wrapped */
+  gap: 10px; /* Add gap for spacing */
   background: white;
   padding: 15px 20px;
   border-radius: 8px;
@@ -337,6 +347,7 @@ export default {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s;
+  min-width: 80px; /* Set minimum width for category items */
 }
 
 .category-item.active {

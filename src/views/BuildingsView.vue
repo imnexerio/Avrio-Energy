@@ -92,6 +92,7 @@ export default {
 .buildings-dashboard {
   display: flex;
   height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -99,10 +100,14 @@ export default {
   padding: 20px;
   background-color: #f5f7fa;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-content {
   margin-top: 20px;
+  width: 100%;
 }
 
 .map-section {
@@ -119,6 +124,7 @@ export default {
   padding: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow-x: auto; /* Allow horizontal scrolling within the container only */
 }
 
 .search-bar {
@@ -145,12 +151,17 @@ export default {
 .buildings-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* Fixed layout to control column widths */
+  min-width: 650px; /* Minimum width to ensure readability */
 }
 
 .buildings-table th, .buildings-table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for text overflow */
 }
 
 .buildings-table th {

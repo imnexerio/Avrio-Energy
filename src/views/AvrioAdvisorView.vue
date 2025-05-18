@@ -129,6 +129,7 @@ export default {
 .advisor-dashboard {
   display: flex;
   height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -136,24 +137,29 @@ export default {
   padding: 20px;
   background-color: #f5f7fa;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-content {
   margin-top: 20px;
+  width: 100%;
 }
 
 .summary-section {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 15px; /* Add gap for consistent spacing */
   margin-bottom: 20px;
 }
 
 .summary-card {
   flex: 1;
+  min-width: 220px; /* Minimum width before wrapping */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-right: 15px;
   text-align: center;
   color: white;
 }
@@ -208,9 +214,11 @@ export default {
 
 .rec-header {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  gap: 10px; /* Add spacing when wrapped */
 }
 
 .priority {
@@ -242,13 +250,15 @@ export default {
 
 .rec-stats {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 15px; /* Add spacing between wrapped items */
   margin-bottom: 15px;
 }
 
 .stat {
   text-align: center;
   flex: 1;
+  min-width: 100px; /* Set a minimum width for stats */
 }
 
 .label {

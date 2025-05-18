@@ -245,6 +245,7 @@ export default {
 .tickets-dashboard {
   display: flex;
   height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -252,23 +253,28 @@ export default {
   padding: 20px;
   background-color: #f5f7fa;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-content {
   margin-top: 20px;
+  width: 100%;
 }
 
 .status-cards {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow cards to wrap on small screens */
+  gap: 15px; /* Use gap for consistent spacing */
   margin-bottom: 20px;
 }
 
 .status-card {
   flex: 1;
+  min-width: 200px; /* Minimum width before wrapping */
   border-radius: 8px;
   padding: 20px;
-  margin-right: 15px;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -336,23 +342,30 @@ export default {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow-x: auto; /* Allow horizontal scrolling within the table container only */
 }
 
 .tickets-header {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  gap: 10px; /* Add gap for spacing when wrapped */
 }
 
 .ticket-controls {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
   align-items: center;
+  gap: 10px; /* Add gap for spacing when wrapped */
 }
 
 .search-bar {
   display: flex;
-  margin-right: 15px;
+  flex: 1;
+  min-width: 200px; /* Minimum width for search bar */
+  max-width: 400px; /* Maximum width for search bar */
 }
 
 .search-bar input {
@@ -383,7 +396,8 @@ export default {
 
 .filter-bar {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 10px; /* Add spacing between wrapped items */
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 4px;
@@ -393,6 +407,8 @@ export default {
 .filter-group {
   display: flex;
   align-items: center;
+  margin-right: 10px; /* Add spacing between filter groups */
+  min-width: 150px; /* Set minimum width for filter groups */
 }
 
 .filter-group label {
@@ -409,12 +425,17 @@ export default {
 .tickets-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* Fixed layout to control column widths */
+  min-width: 650px; /* Minimum width to ensure readability */
 }
 
 .tickets-table th, .tickets-table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for text overflow */
 }
 
 .tickets-table th {

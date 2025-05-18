@@ -113,6 +113,7 @@ export default {
 .assets-dashboard {
   display: flex;
   height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -120,6 +121,9 @@ export default {
   padding: 20px;
   background-color: #f5f7fa;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-content {
@@ -166,6 +170,14 @@ export default {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow-x: auto; /* Allow horizontal scrolling within the container only */
+}
+
+.assets-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Fixed layout to control column widths */
+  min-width: 650px; /* Minimum width to ensure readability */
 }
 
 .table-header {
@@ -194,11 +206,6 @@ export default {
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-}
-
-.assets-table {
-  width: 100%;
-  border-collapse: collapse;
 }
 
 .assets-table th, .assets-table td {

@@ -186,6 +186,7 @@ export default {
 .savings-dashboard {
   display: flex;
   height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -193,24 +194,29 @@ export default {
   padding: 20px;
   background-color: #f5f7fa;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin-left: 60px; /* Offset for the fixed sidebar */
+  width: calc(100% - 60px); /* Account for sidebar width */
 }
 
 .dashboard-content {
   margin-top: 20px;
+  width: 100%;
 }
 
 .summary-section {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 15px; /* Add gap for consistent spacing */
   margin-bottom: 20px;
 }
 
 .summary-card {
   flex: 1;
+  min-width: 220px; /* Set a minimum width before wrapping */
   background: white;
   border-radius: 8px;
   padding: 20px;
-  margin-right: 15px;
   display: flex;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -282,18 +288,23 @@ export default {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow-x: auto; /* Allow horizontal scrolling within the table container only */
 }
 
 .table-header {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  gap: 10px; /* Add spacing when wrapped */
 }
 
 .filter-controls {
   display: flex;
+  flex-wrap: wrap; /* Allow controls to wrap */
   align-items: center;
+  gap: 10px; /* Add spacing when wrapped */
 }
 
 .filter-controls select {
@@ -315,12 +326,17 @@ export default {
 .savings-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* Fixed layout to control column widths */
+  min-width: 650px; /* Minimum width to ensure readability */
 }
 
 .savings-table th, .savings-table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for text overflow */
 }
 
 .savings-table th {
