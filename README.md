@@ -2,7 +2,9 @@
 
 A responsive, component-based dashboard for Avrio Energy's analytical platform, designed to help business owners manage and optimize their property portfolios.
 
-<img src="https://raw.githubusercontent.com/imnexerio/Avrio-Energy/master/public-portfolio/preview.gif" alt="Dashboard Preview" width="90%" />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/imnexerio/Avrio-Energy/master/public-portfolio/preview.gif" alt="Dashboard Preview" width="90%" />
+</div>
 
 ## ✨ Features
 
