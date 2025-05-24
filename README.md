@@ -96,5 +96,5 @@ This project was developed as part of an internship assignment for Avrio Energy,
       <img src="https://img.shields.io/badge/GitHub-View%20Repository-blue?style=for-the-badge&logo=github" alt="GitHub Repository" />
     </a>
   </p>
-  <p>Developed with ❤️ by <a href="https://github.com/imnexerio">imnexerio</a></p>
+  <p>Developed with ❤️ by <a href="https://github.com/imnexerio">IMNEXERIO</a></p>
 </div>
